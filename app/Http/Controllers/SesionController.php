@@ -68,6 +68,7 @@ class SesionController extends Controller
 
     }
 
+
     public function getUserForNameData(Request $request)
     {
         //Traemos lo del formulario que agrego el usuario

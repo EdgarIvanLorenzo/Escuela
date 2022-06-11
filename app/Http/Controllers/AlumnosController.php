@@ -36,15 +36,14 @@ class AlumnosController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return array
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
     public function store(Request $request)
     {
         //Metodo store
         $data = $request->except('_token');
-        return $data;
-        /*Alumnos::insert($data);
-        return redirect('Alumnos');*/
+        Alumnos::insert($data);
+        return redirect('Alumnos');
     }
 
     /**

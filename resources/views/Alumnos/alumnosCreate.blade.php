@@ -79,7 +79,7 @@
         <input type="text" name="Direccion" id="direccion" class="form-control" required/>
         <br>
 
-        <select name="idGrupo[]" class="form-select" multiple>
+        <select name="idGrupo" class="form-select">
             @foreach($grupos as $grupo)
                 <option value="{{$grupo->id}}">{{$grupo->Grado." ".$grupo->Grupo}}</option>
             @endforeach
